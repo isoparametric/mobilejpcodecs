@@ -7,7 +7,12 @@
 
 #define USING_IMPORTED_MAPS
 
-#include "cjkcodecs.h"
+#include <Python.h>
+#ifdef PY_VERSION_Hex>=0x02070000
+#include "2.7/cjkcodecs.h"
+#else
+#include "2.6/cjkcodecs.h"
+#endif
 
 #include "mobilejpcodecs.h"
 #include "mappings_docomo.h"
